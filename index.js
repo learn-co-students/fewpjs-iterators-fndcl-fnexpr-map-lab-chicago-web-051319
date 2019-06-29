@@ -13,11 +13,11 @@ const tutorials = [
 
 
 function titleCased() {
-  return tutorials.map(tutorial =>
+  return tutorials.map(function(tutorial){
     tutorial = tutorial.split(' ');
     upperCase(tutorial)
     return tutorial.join(' ');
-  );
+  });
 }
 
 function upperCase(tutorial){
