@@ -13,11 +13,11 @@ const tutorials = [
 
 
 function titleCased() {
-  return tutorials.map(function (tutorial) {
+  return tutorials.map(tutorial =>
     tutorial = tutorial.split(' ');
     upperCase(tutorial)
     return tutorial.join(' ');
-  });
+  );
 }
 
 function upperCase(tutorial){
@@ -25,3 +25,5 @@ function upperCase(tutorial){
     tutorial[i] = tutorial[i].charAt(0).toUpperCase() + tutorial[i].slice(1);
   }
 }
+
+// (student => student + " the wizard")
