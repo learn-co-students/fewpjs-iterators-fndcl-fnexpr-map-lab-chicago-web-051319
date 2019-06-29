@@ -15,9 +15,13 @@ const tutorials = [
 function titleCased() {
   return tutorials.map(function (tutorial) {
     tutorial = tutorial.split(' ');
-    for (let i = 0; i < tutorial.length; i++) {
-      tutorial[i] = tutorial[i].charAt(0).toUpperCase() + tutorial[i].slice(1);
-    }
+    upperCase(tutorial)
     return tutorial.join(' ');
   });
+}
+
+function upperCase(tutorial){
+  for (let i = 0; i < tutorial.length; i++) {
+    tutorial[i] = tutorial[i].charAt(0).toUpperCase() + tutorial[i].slice(1);
+  }
 }
